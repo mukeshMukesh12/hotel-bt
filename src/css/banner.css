@@ -1,0 +1,8 @@
+.banner {
+	height:300px;
+	position: relative;
+	background: #D38312; 
+	background: -webkit-linear-gradient(to right; #A83279; #D38312);
+	background: linear-gradient(to right; #A83279; #D38312)
+
+}

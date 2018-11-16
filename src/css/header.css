@@ -1,0 +1,30 @@
+.header-menu .mdl-layout__header-row .mdl-navigation {
+	margin-left: auto !important;
+}
+.header-menu .mdl-layout__header {
+	background: #fff;
+}
+.header-menu .mdl-navigation a {
+	color: #4b4236;
+	padding: 0;
+	margin-left: 10px;
+	text-shadow: 1px 0px #deb886;
+}
+@media (max-width: 1024px) {
+	.header-menu .mdl-layout__header {
+		display: block;
+		
+	}
+	.header-menu .mdl-layout__header .mdl-layout__header-row {
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		height: auto;
+	}
+	.header-menu .mdl-layout__header .mdl-layout__header-row .mdl-navigation{
+		display: none;
+	}
+}
+.header-menu i.material-icons {
+	color: #000;
+	text-shadow: 1px 0px #deb886;
+}
