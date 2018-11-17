@@ -4,20 +4,26 @@ import Header from './components/header';
 import Banner from './components/banner';
 import './App.css';
 import Main from './components/main';
-import {Layout,Content} from 'react-mdl';
+import { MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark', // Switching the dark mode on is a single property value change.
+  },
+  typography: {
+    useNextVariants: true,
+  },
+});
 
 class App extends Component {
   render() {
     return (
-        <div>
-         <Header />
-         <Banner />
-         <Layout>
-         <Content>
-         <Main />
-         </Content>
-         </Layout>
-      </div>
+      <MuiThemeProvider theme={theme}>
+          <Header />
+          <Banner />
+        
+         
+          <Main />
+      </MuiThemeProvider>
     );
   }
 }
