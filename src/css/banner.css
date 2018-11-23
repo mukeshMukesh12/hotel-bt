@@ -1,8 +1,187 @@
 .banner {
-	height:300px;
+	background: url("../images/background.png") no-repeat;
+	padding: 30px 30px 0;
+	background-size: 100%;
+}
+.banner > h2,.banner > p {
+	color: #fff;
+	z-index: 100;
 	position: relative;
-	background: #D38312; 
-	background: -webkit-linear-gradient(to right; #A83279; #D38312);
-	background: linear-gradient(to right; #A83279; #D38312)
+}
+.banner:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.3);
+	z-index: 0;
+}
+.banner form {
+	z-index: 100;
+	position: relative;
+	border: 2px solid #deb886;
+	box-shadow: 0 0 0 2px #deb886;
+	margin-top: 50px;
+}
+.banner form .location {
+	flex: 0 0 40%;
+	-webkit-flex: 0 0 40%;
+}
+.banner form .date-picker {
+	flex: 0 0 20%;
+	-webkit-flex: 0 0 20%;
+	background: #fff;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+	height: 50px;
+	align-items: center;
+	-webkit-align-items: center;
+	box-shadow: 0 0 0 2px #deb886;
 
+}
+.banner form .rooms {
+	flex: 0 0 20%;
+	-webkit-flex: 0 0 20%;
+	background: #fff;
+	box-shadow: 0 0 0 2px #deb886; 
+	height: 50px;
+
+}
+.banner form .rooms > div {
+	width: 100%;
+}
+.banner form .rooms > div > label {
+	color: hsl(0,0%,50%);
+	padding-left: 30px;
+	font-size: 15px;
+	font-family: 'Roboto';
+	font-weight: 300;
+	position: relative;
+	top: 5px;
+}
+.banner form .rooms > div > label + div {
+	margin-top: 0;
+}
+.banner form .rooms > div input[type="text"] {
+	font-size: 20px;
+	font-family: 'Roboto';
+	font-weight: 300;
+	color: hsl(0,0%,50%);
+	-webkit-appearance: none;
+	border-bottom: none;
+	padding-left: 20px;
+	padding-bottom: 5px;
+}
+.banner form .date-picker input[type="text"] {
+	width: 100px;
+	border: none;
+	box-shadow: none;
+	border-radius: none;
+	-webkit-appearance: none;
+    color: hsl(0,0%,50%);
+    font-size: 20px;
+    font-family: 'Roboto';
+	font-weight: 300;
+}
+.banner form > button {
+	flex: 0 0 20%;
+	-webkit-flex: 0 0 20%;
+	border-radius: 0;
+	box-shadow: 0px 0px 0px 2px #deb886;
+	background: #fff;
+	height: 50px;
+	font-size: 20px;
+	font-family: 'Roboto';
+	font-weight: 300;
+	color: hsl(0,0%,50%);
+	position: relative;
+}
+.banner form > button a {
+	width: 100%;
+	color: inherit;
+	position: absolute;
+	height: 100%;
+	display: flex;
+	display: -webkit-flex;
+	text-decoration: none;
+	align-items: center;
+	-webkit-align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+.banner form .location {}
+.banner form .location .css-vj8t7z,.banner form .location .css-2o5izw{
+	min-height: 50px;
+	border-radius: 0;
+	box-shadow: 0 0 0 2px #deb886;
+	font-size: 20px;
+	font-family: 'Roboto';
+	font-weight: 300;
+}
+.banner form {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	width: 100%;
+	align-items: flex-start;
+	-webkit-align-items: flex-start;
+	min-height: 50px;
+}
+.banner .rooms .select-rooms {
+	position: absolute;
+}
+.rooms ul {
+   background: #fff;
+   padding: 10px;
+   list-style: none;
+   width: 100%;
+   max-width: 320px;
+   box-shadow: 0 0 0 2px #deb886;
+}
+.rooms ul li {
+  font-size: 20px;
+  font-weight: 300;
+  color: hsl(0,0%,50%);
+  font-family: 'Roboto';
+  text-transform: capitalize;
+  margin-top: 10px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.rooms ul li div span img{
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.6);
+	opacity: 0.7;
+	padding: 1px 5px;
+	cursor: pointer;
+}
+.rooms ul li div span.minus-1 img,.rooms ul li div span.childminus-0 img {
+	pointer-events: none;
+	-webkit-filter: blur(5px);
+    filter: blur(1px);
+}
+.rooms ul li div span + span {
+	margin-left: 10px;
+}
+.rooms ul li:nth-last-of-type(1) {
+	font-weight: normal;
+	font-size: 18px;
+	text-align: right;
+	margin-top: 20px;
+	align-self: flex-end;
+	justify-content: flex-end;
+
+}
+.rooms ul li:nth-last-of-type(1) span {
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+.rooms ul li:nth-last-of-type(1) span:hover {
+	background: rgba(0,0,0,0.1);
+	padding: 10px;
 }

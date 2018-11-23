@@ -1,6 +1,10 @@
 import React,{ Component } from 'react';
 import Hotel from './../data';
 import { Link } from 'react-router-dom';
+import Location from './location';
+import  RecipeReviewCard from './cards';
+import CustomizedSnackbars from './adds';
+
 
 
 class Home extends Component {
@@ -21,12 +25,12 @@ class Home extends Component {
 		console.log(data)
  		return (
 			<div>
-           		<h1>Home Page</h1>
-				{
-					data.map( el => <div key={el.id}>
-						<span>{el.name}</span><Link to = {{pathname: `/hotel/${el.name}`, state: el }}><img src={require(`../${el.img}`)} /></Link>
-					</div>)
-				}
+           		<Location />
+           		<CustomizedSnackbars/>
+           		< RecipeReviewCard/>
+
+           		
+				
            </div>
 		)
 	}

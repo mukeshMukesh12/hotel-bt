@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  
+}
+.container .content * {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+.locations > h1 {
+  font-family: 'Roboto';
+  font-weight: 400;
+  text-shadow: 1px 0px #deb886;
+}
+div.locations {
+  width: 100%;
+  max-width: calc(100% - 80px);
+  margin: 25px auto;
+}

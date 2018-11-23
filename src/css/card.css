@@ -1,21 +1,21 @@
-.MuiPaper-root-221 * {
+.card * {
   color: #000 !important;
   
   font-family: 'Roboto';
   font-weight: 300;
 }
-.MuiPaper-root-221 .button-group button .MuiButton-label-89{
+.card .button-group button .MuiButton-label-89{
   color: #fff !important;
   font-weight: 400;
 }
 .rating-3 svg,.rating-0 svg {
   fill: hsl(0,0%,50%);
 }
-.rating-5 svg,.rating-3 svg:nth-child(-n+3),.MuiCardHeader-avatar-249 svg {
+.rating-5 svg,.rating-3 svg:nth-child(-n+3),.MuiCardHeader-avatar-249 svg,.card svg.location {
   fill: #f50057;
 }
 
-.MuiPaper-root-221 span.MuiCardHeader-title-252 {
+.card span.MuiCardHeader-title-252 {
   font-size: 20px;
   font-family: 'Roboto';
   color: #000;

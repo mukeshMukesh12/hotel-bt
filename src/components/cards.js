@@ -17,11 +17,12 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import './../css/card.css';
-
+import {Link} from 'react-router-dom';
 
 const styles = theme => ({
   card: {
     maxWidth: 400,
+    color: '#000',
   },
   media: {
     height: 0,
@@ -48,7 +49,7 @@ const styles = theme => ({
   },
 });
 
-class Hotels extends React.Component {
+class RecipeReviewCard extends React.Component {
   state = { expanded: false };
 
   handleExpandClick = () => {
@@ -61,12 +62,12 @@ class Hotels extends React.Component {
     return (
       <Grid container spacing={24} style={{maxWidth: "calc(100% - 80px)",width: "100%",margin: "auto"}}>
       <Grid item xs={12} >
-      <h1 style={{color: "#000",fontFamily: "Roboto",fontWeight: "400",textShadow: "1px 0px #deb886"}}>List of Hotels in District Name</h1>
+      <h1 style={{color: "#000",fontFamily: "Roboto",fontWeight: "400",textShadow: "1px 0px #deb886"}}>Popular Hotels (On the basis of Feedback and Tour Reviews from our Travelers)</h1>
       </Grid>
          {hoteldes.map( el => <Grid item xs={3} key={el.id} id={el.id} >
       
-      <Card className={`${classes.card} card`} style={{ background: "#fff"}}>
-        <CardHeader 
+      <Card className={`${classes.card} card`} style={{ background: "#fff",color:"#000"}}>
+        <CardHeader className="card-header"
           avatar={
            <LocationOnTwoToneIcon className="location"/>
           }
@@ -148,6 +149,9 @@ class Hotels extends React.Component {
               <Button variant="contained" color="secondary" style={{fontWeight:"400"}}>Book Now</Button>
 
             </div>
+            <div className="button-group" style={{textAlign:"center"}}>
+              <Link to="/hotel-listing" style={{ textDecoration: "none"}}><Button variant="contained" color="secondary" style={{width:"100%",marginTop:"10px"}}>NearBy Hotels</Button></Link>
+            </div>
           </CardContent>
         </Collapse>
       </Card>
@@ -157,8 +161,8 @@ class Hotels extends React.Component {
   }
 }
 
-Hotels.propTypes = {
+RecipeReviewCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Hotels);
+export default withStyles(styles)(RecipeReviewCard);

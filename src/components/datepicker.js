@@ -6,9 +6,9 @@ class Datepicker1 extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-      		startDate: "",
-      		endDate: "",
-      		days: ""
+      		startDate: null,
+      		endDate: null
+      		
     	}
     	
     
@@ -19,6 +19,7 @@ class Datepicker1 extends Component {
     		startDate: startdate
     	})
     }
+
 	handleChangeEnd = enddate => {
 		this.setState ({
 			endDate: enddate
@@ -30,13 +31,13 @@ class Datepicker1 extends Component {
     
 	render() {
 		return(
-         <div>
+         <div className="date-picker">
          	
          	<DatePicker
     selected={this.state.startDate}
-    dateFormat = "DD MMMM YYYY"
+    dateFormat = "DD/MM/YY"
     selectsStart
-    placeholderText = "Start date"
+    placeholderText = "Check In "
     startDate={this.state.startDate}
     endDate={this.state.endDate}
     onChange={this.handleChangeStart}
@@ -45,15 +46,17 @@ class Datepicker1 extends Component {
 
 <DatePicker
     selected={this.state.endDate}
-    dateFormat = "DD MMMM YYYY"
+    dateFormat = "DD/MM/YY"
     selectsEnd
-    placeholderText = "End date"
+    placeholderText = " Check Out "
     startDate={this.state.startDate}
     endDate={this.state.endDate}
     onChange={this.handleChangeEnd}
-    calendarClassName="rasta-stripes"
+    
 />
+ 
   
+
          </div>
 
 		);
