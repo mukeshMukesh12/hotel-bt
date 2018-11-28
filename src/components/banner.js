@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 import {Typography,Button} from '@material-ui/core';
 import './../css/banner.css';
 import background from './../images/background.png';
+import FloatingActionButtons from './specialoffers';
+import DialogSelect from './pricerange';
+import GroupBooking from './groupbooking';
 var value = document.getElementsByClassName('css-xp4uvy');
 console.log(value);
 
@@ -17,20 +20,27 @@ class Banner extends Component {
 		
 		<div className="banner" style={style.banner}>
 		<Typography component="h2" variant="headline">
-          		Find deals with hotels, apartments, and more...
+          		Your website for all Bhutan Travel needs!
         	</Typography>
         <Typography variant="body2">
-          Find deals with hotels, apartments, and more...
+          Find deals with hotels, apartments, and more...<br/><br/>
+
         </Typography>
+        <GroupBooking/>
+        <FloatingActionButtons />
 			<form >
 			    
 				<IntegrationReactSelect />
 				<Datepicker1 /> 
 				<ControlledOpenSelect />
-				<Button variant="contained">
-        			<Link to="/hotel-listing">Search</Link>
-      			</Button>
+				<DialogSelect/>
+				<Link to="/hotel-listing" className="search"><Button variant="contained">
+        			Search
+      			</Button></Link>
+
 			</form>
+		
+				
 			
 		</div>
 
@@ -39,7 +49,7 @@ class Banner extends Component {
 }
 const style = {
 	banner: {
-		height:'300px',
+		height:'375px',
 		position: 'relative'
 	}
 	

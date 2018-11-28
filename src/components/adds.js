@@ -129,28 +129,28 @@ class CustomizedSnackbars extends React.Component {
           <MySnackbarContentWrapper
             onClose={this.handleClose}
             variant="success"
-            message="Space for adds"
+            message="Space for advertisements"
           />
         </Snackbar>
         <MySnackbarContentWrapper
           variant="error"
           className={classes.margin}
-          message="space for adds"
+          message="space for advertisements"
         />
         <MySnackbarContentWrapper
           variant="warning"
           className={classes.margin}
-          message="space for adds"
+          message="space for advertisement"
         />
         <MySnackbarContentWrapper
           variant="info"
           className={classes.margin}
-          message="This is an information message!"
+          message="space for advertisement"
         />
         <MySnackbarContentWrapper
           variant="success"
           className={classes.margin}
-          message="This is a success message!"
+          message="space for advertisement"
         />
       </div>
     );
