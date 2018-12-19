@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import './App.css';
 import Main from './components/main';
 import { MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+
 const theme = createMuiTheme({
   palette: {
     type: 'dark', // Switching the dark mode on is a single property value change.

@@ -15,7 +15,38 @@ console.log(value);
 
 
 class Banner extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+          location:"",
+          days: ""
+		}
+	}
+
+	onButtonClick =(e) =>{
+		e.preventDefault();
+		
+        var location = this.state.location;
+        var days = this.state.days;
+        if(!days) {
+        	alert("hello");
+        }
+        alert(`form submit result\n Search location: ${location}\n no. of days booked: ${days}`)
+		
+	}
+	handleLoction = (newValue) => {
+       this.setState({
+       	 location:newValue.value
+       })
+       
+	}
+	findDays = nodays => {
+		this.setState({
+          days: nodays
+		})
+	}
 	render() {
+
 		return (
 		
 		<div className="banner" style={style.banner}>
@@ -28,15 +59,15 @@ class Banner extends Component {
         </Typography>
         <GroupBooking/>
         <FloatingActionButtons />
-			<form >
+			<form onSubmit={this.onButtonClick}>
 			    
-				<IntegrationReactSelect />
-				<Datepicker1 /> 
+				<IntegrationReactSelect onNewName={this.handleLoction} ref="name"/>
+				<Datepicker1 /*noOfDays={this.findDays}*//> 
 				<ControlledOpenSelect />
 				<DialogSelect/>
-				<Link to="/hotel-listing" className="search"><Button variant="contained">
+				<Button variant="contained" type="submit">
         			Search
-      			</Button></Link>
+      			</Button>
 
 			</form>
 		

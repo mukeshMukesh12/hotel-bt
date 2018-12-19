@@ -13,7 +13,7 @@ class header extends Component {
            <Link to="/"><img src = {Logo} width = "200" /></Link>
         </div>
             <div className="menu">
-                <Link to="/">List Your Property</Link>
+                <Link to="/list-your-property">List Your Property</Link>
                  <Link to="/register">Register</Link>
                 <Link to="/login">Sign in</Link>
                

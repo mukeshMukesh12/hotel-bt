@@ -5,6 +5,8 @@ import Hotel from './hotels';
 import Login from './login';
 import Register from './register';
 import { HotelDes } from './HotelDes';
+import Listproperty from './listproperty';
+
 
 const Main = () => (
   <Switch>
@@ -12,6 +14,8 @@ const Main = () => (
   	<Route path="/login" component={Login}/>
   	<Route path="/register" component={Register}/>
   	<Route path="/hotel-listing" component={Hotel}/>
+  	<Route path="/list-your-property" component={Listproperty}/>
+  
 	<Route path="/hotel/:id" component={HotelDes} />
   </Switch>
 

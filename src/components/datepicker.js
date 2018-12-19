@@ -15,16 +15,36 @@ class Datepicker1 extends Component {
 
 	}
     handleChangeStart = startdate => {
-    	this.setState ({
-    		startDate: startdate
-    	})
+      if(startdate > moment()) {
+        this.setState ({
+        startDate: startdate
+        })
+      }
+
+      else {
+        this.setState ({
+        startDate: moment()
+        })
+      }
+    	
     }
 
 	handleChangeEnd = enddate => {
-		this.setState ({
-			endDate: enddate
+    if(this.state.startDate < enddate) {
+      this.setState ({
+        endDate: enddate
+      })
+      //var sDate = moment(this.state.startDate,"DD/MM/YY");
+    //var eDate = moment(enddate,"DD/MM/YY");
 
-		})
+    //this.props.noOfDays(noday);
+    } else {
+      this.setState ({
+        endDate: this.state.startDate
+      })
+    }
+    
+
 	}
   
     
@@ -39,7 +59,7 @@ class Datepicker1 extends Component {
     selectsStart
     placeholderText = "Check In "
     startDate={this.state.startDate}
-    endDate={this.state.endDate}
+    //endDate={this.state.endDate}
     onChange={this.handleChangeStart}
     
 />
